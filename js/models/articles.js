@@ -1,6 +1,8 @@
-/* Articles: one source for the home page list and the reading page (article.html?a=<slug>).
-   Each text field has an English (en) and Arabic (ar) version. Bodies are plain HTML. */
-window.ARTICLES = [
+/**
+ * Model: articles for the home page list and the reading page (article.html?a=<slug>).
+ * Each text field has an English (en) and Arabic (ar) version. Bodies are plain HTML.
+ */
+export const ARTICLES = [
   {
     slug: 'airflow-dbt-pipelines',
     photo: '1558494949-ef010cbdcc31',
@@ -195,61 +197,14 @@ window.ARTICLES = [
   },
 ];
 
-/* Render the home page list and the reading page. Runs before main.js so its animations pick these up. */
-(function () {
-  const list = window.ARTICLES;
-  const lang = document.documentElement.lang === 'ar' ? 'ar' : 'en';
-  const href = a => `article.html?a=${encodeURIComponent(a.slug)}`;
-  const VISIBLE = 3;
-  // Unsplash photos (free to use under the Unsplash License)
-  const photo = (a, w, h) => `https://images.unsplash.com/photo-${a.photo}?w=${w}&h=${h}&fit=crop&q=70&auto=format`;
+/** How many articles the home page shows before "Show more". */
+export const VISIBLE_ARTICLES = 3;
 
-  function row(a, i, extraFrom) {
-    const extra = extraFrom != null && i >= extraFrom ? ' is-extra' : '';
-    return `<a href="${href(a)}" class="article-row reveal${extra}" style="--d:${((i % VISIBLE) * 0.06).toFixed(2)}s">
-      <span class="article-thumb" style="--g1:${a.g1};--g2:${a.g2}"><img src="${photo(a, 240, 240)}" alt="" loading="lazy" decoding="async"></span>
-      <span class="article-info">
-        <span class="article-title">${a.title[lang]}</span>
-        <span class="article-excerpt">${a.excerpt[lang]}</span>
-        <span class="article-meta"><span>${a.date[lang]}</span><b>${a.cat[lang]}</b></span>
-      </span>
-      <span class="article-go"><i class="bi bi-arrow-up-right"></i></span>
-    </a>`;
-  }
+export const findArticle = slug => ARTICLES.find(a => a.slug === slug);
 
-  // Home page list: first three, the rest behind "Show more"
-  const home = document.getElementById('articleList');
-  if (home) {
-    home.innerHTML = list.map((a, i) => row(a, i, VISIBLE)).join('');
-    const more = document.getElementById('articlesMore');
-    if (more && list.length <= VISIBLE) more.hidden = true;
-  }
+export const otherArticles = (slug, count = 3) => ARTICLES.filter(a => a.slug !== slug).slice(0, count);
 
-  // Reading page
-  const page = document.getElementById('articlePage');
-  if (page) {
-    const slug = new URLSearchParams(location.search).get('a');
-    const a = list.find(x => x.slug === slug);
-    const minsLabel = n => (lang === 'ar' ? `${n} دقائق قراءة` : `${n} min read`);
-    if (!a) {
-      page.querySelector('[data-article="title"]').textContent = lang === 'ar' ? 'المقال غير موجود' : 'Article not found';
-      page.querySelector('[data-article="body"]').innerHTML = `<p>${lang === 'ar' ? 'ربما نُقل هذا المقال. تصفح المقالات الأخرى أدناه.' : 'This article may have moved. Browse the other articles below.'}</p>`;
-      page.querySelector('[data-article="meta"]').remove();
-      page.querySelector('[data-article="cover"]').remove();
-    } else {
-      document.title = `${a.title[lang]} · tajoj-plt`;
-      document.documentElement.dataset.titleAr = `${a.title.ar} · tajoj-plt`;
-      page.querySelector('[data-article="cat"]').textContent = a.cat[lang];
-      page.querySelector('[data-article="title"]').textContent = a.title[lang];
-      page.querySelector('[data-article="lead"]').textContent = a.excerpt[lang];
-      page.querySelector('[data-article="meta"]').innerHTML = `<span>${a.date[lang]}</span><span>${minsLabel(a.mins)}</span>`;
-      const cover = page.querySelector('[data-article="cover"]');
-      cover.style.setProperty('--g1', a.g1);
-      cover.style.setProperty('--g2', a.g2);
-      cover.innerHTML = `<img src="${photo(a, 1400, 700)}" alt="" decoding="async">`;
-      page.querySelector('[data-article="body"]').innerHTML = a.body[lang];
-    }
-    const others = document.getElementById('moreArticles');
-    if (others) others.innerHTML = list.filter(x => !a || x.slug !== a.slug).slice(0, 3).map((x, i) => row(x, i, null)).join('');
-  }
-})();
+/** Unsplash photo URL for an article (free to use under the Unsplash License). */
+export const articlePhoto = (a, w, h) => `https://images.unsplash.com/photo-${a.photo}?w=${w}&h=${h}&fit=crop&q=70&auto=format`;
+
+export const articleUrl = a => `article.html?a=${encodeURIComponent(a.slug)}`;

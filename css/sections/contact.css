@@ -1,0 +1,21 @@
+/* ---------------- Contact ---------------- */
+.accent-line { display: block; width: 56px; height: 4px; border-radius: 4px; background: var(--green); margin: 2.5rem 0 2rem; }
+.steps { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.8rem; max-width: 560px; }
+.steps span {
+  display: inline-flex; align-items: center; gap: .55rem;
+  background: #fff; border: 1px solid #efefef; border-radius: 999px; padding: .55rem 1.1rem .55rem 1.3rem;
+  font-weight: 600; font-size: .95rem; color: #333; box-shadow: 0 6px 16px -10px rgba(0, 0, 0, .15);
+}
+.steps b { color: var(--orange); font-weight: 600; }
+.steps b::after { content: "•"; margin-inline-start: .55rem; }
+
+.form-card {
+  background: #fff; border: 1px solid var(--line); border-radius: 36px;
+  padding: clamp(1.5rem, 3vw, 2.5rem); box-shadow: 0 30px 70px -30px rgba(0, 0, 0, .2);
+}
+.form-card h3 { font-size: 1.8rem; font-weight: 800; letter-spacing: -.035em; margin-bottom: .5rem; }
+.form-card > p { color: var(--muted); line-height: 1.7; margin-bottom: 1.6rem; }
+.form-card .form-label { font-weight: 600; font-size: .92rem; margin-bottom: .45rem; }
+.fx { border-radius: 18px !important; border-color: #e6e6e6 !important; padding: .85rem 1.1rem !important; font-size: .95rem; }
+.fx:focus { border-color: var(--ink) !important; box-shadow: 0 0 0 4px rgba(0, 0, 0, .06) !important; }
+.was-validated .fx:invalid { border-color: #dc3545 !important; }

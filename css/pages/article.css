@@ -1,0 +1,25 @@
+/* ---------------- Article reading page ---------------- */
+.article-hero { position: relative; padding: 140px 0 60px; overflow-x: clip; }
+.article-wrap { max-width: 760px; margin-inline: auto; }
+.article-h1 { font-size: clamp(2rem, 4.6vw, 3.4rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.1; margin: 0 0 1.2rem; }
+.article-lead { font-size: 1.2rem; line-height: 1.7; color: var(--muted); margin-bottom: 1.4rem; }
+.article-byline { display: flex; flex-wrap: wrap; gap: .9rem; font-size: .88rem; font-weight: 600; color: #8a8a8a; }
+.article-byline span + span::before { content: "•"; margin-inline-end: .9rem; color: #c4c4c4; }
+.article-cover-lg {
+  max-width: 1040px; margin: 2.6rem auto 3rem; aspect-ratio: 2 / 1; border-radius: 32px; overflow: hidden;
+  background: linear-gradient(135deg, var(--g1, #e4e4e7), var(--g2, #f4f4f5)); box-shadow: var(--shadow-soft);
+}
+.article-cover-lg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.prose { font-size: 1.12rem; line-height: 1.9; color: #27272a; }
+.prose p { margin-bottom: 1.4rem; }
+.prose h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -.03em; margin: 2.6rem 0 .9rem; color: var(--ink); }
+.prose strong { color: var(--ink); }
+.prose > p:first-child::first-letter { float: inline-start; font-size: 3.4em; line-height: .9; font-weight: 800; margin-inline-end: .1em; margin-top: .08em; }
+[dir="rtl"] .prose > p:first-child::first-letter { float: none; font-size: inherit; font-weight: inherit; margin: 0; }
+.article-more-sec { border-top: 1px solid var(--line); }
+@media (max-width: 575px) {
+  .article-hero { padding-top: 110px; }
+  .article-cover-lg { border-radius: 22px; aspect-ratio: 4 / 3; }
+  .prose { font-size: 1.04rem; }
+}
+[data-theme="dark"] .prose { color: #d4d4d8; }

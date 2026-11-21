@@ -1,0 +1,7 @@
+/* ---------------- Reveal on scroll ---------------- */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease) var(--d, 0s), transform .9s var(--ease) var(--d, 0s); }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}

@@ -1,0 +1,24 @@
+/* ---------------- Sections ---------------- */
+.section { position: relative; padding: 110px 0; overflow-x: clip; }
+@media (max-width: 767px) { .section { padding: 80px 0; } }
+
+.eyebrow {
+  display: flex; align-items: center; gap: 1.25rem;
+  font-size: .8rem; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; color: #6f6f6f;
+  margin-bottom: 1.75rem; position: relative; z-index: 1;
+}
+.eyebrow::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.eyebrow-soft { text-transform: none; font-size: .9rem; font-weight: 600; letter-spacing: 0; }
+
+.watermark {
+  position: absolute; top: -.32em; left: 50%; transform: translate(-50%, var(--py, 0px));
+  font-size: clamp(5rem, 15vw, 13rem); font-weight: 900; letter-spacing: -.05em; line-height: 1;
+  color: rgba(0, 0, 0, .035); white-space: nowrap; pointer-events: none; user-select: none; z-index: 0;
+}
+#journey .watermark { z-index: 2; color: rgba(255, 255, 255, .06); top: .05em; mix-blend-mode: normal; }
+
+.section-title {
+  font-size: clamp(2.3rem, 5vw, 4.2rem); font-weight: 800; letter-spacing: -.05em; line-height: 1.02;
+  margin: 0; position: relative; z-index: 1;
+}
+.section-lead { color: var(--muted); font-size: 1.1rem; line-height: 1.75; margin: 0; position: relative; z-index: 1; }

@@ -53,7 +53,7 @@
     };
   </script>
 
-  <link href="css/style.css?v=58" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
@@ -217,7 +217,7 @@
       </div>
 
       <div class="skills-track" id="skillsTrack" dir="ltr">
-        <!-- cards injected by js/main.js -->
+        <!-- cards rendered by js/controllers/skillsController.js -->
       </div>
       <div class="skills-dots" id="skillsDots"></div>
     </section>
@@ -332,7 +332,7 @@
         <div class="eyebrow reveal">Articles &amp; insights</div>
         <div class="row g-5">
           <div class="col-lg-7">
-            <div class="article-list" id="articleList"><!-- rendered from js/articles.js --></div>
+            <div class="article-list" id="articleList"><!-- rendered by js/controllers/articlesController.js --></div>
             <button class="btn-ghost-x articles-more reveal" type="button" id="articlesMore" aria-expanded="false" aria-controls="articleList">
               <span class="more-label">Show more</span> <i class="bi bi-chevron-down"></i>
             </button>
@@ -497,7 +497,6 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/articles.js?v=57"></script>
-  <script src="js/main.js?v=57"></script>
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>

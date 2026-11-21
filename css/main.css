@@ -1,0 +1,31 @@
+/*
+ * Stylesheet entry. Partials load in this order; later files override earlier ones,
+ * so keep themes and reveal last.
+ *   base/        design tokens, page defaults
+ *   layout/      header, section frame, footer
+ *   components/  buttons, floating contact button
+ *   sections/    one file per home page section
+ *   pages/       styles used only by work.html or article.html
+ *   motion/      animations and hover effects
+ *   themes/      dark theme and Arabic (right-to-left) overrides
+ */
+@import url('base/tokens-and-base.css');
+@import url('components/buttons.css');
+@import url('layout/header.css');
+@import url('sections/hero.css');
+@import url('layout/sections.css');
+@import url('sections/services.css');
+@import url('sections/skills.css');
+@import url('sections/journey.css');
+@import url('sections/certificates.css');
+@import url('sections/work.css');
+@import url('sections/contact.css');
+@import url('layout/footer.css');
+@import url('components/floating-button.css');
+@import url('motion/effects.css');
+@import url('sections/articles.css');
+@import url('pages/article.css');
+@import url('pages/work.css');
+@import url('themes/dark.css');
+@import url('themes/rtl.css');
+@import url('motion/reveal.css');

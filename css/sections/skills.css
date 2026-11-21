@@ -1,0 +1,34 @@
+/* ---------------- Skills carousel ---------------- */
+.skills-track {
+  display: flex; gap: 1.1rem; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 1.5rem max(20px, calc((100vw - 1240px) / 2 + 40px)) 2rem;
+  scrollbar-width: none; cursor: grab;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+}
+.skills-track::-webkit-scrollbar { display: none; }
+.skills-track.dragging { cursor: grabbing; scroll-snap-type: none; }
+.skill-card {
+  flex: 0 0 min(320px, 78vw); scroll-snap-align: center; position: relative; overflow: hidden;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius-xl);
+  padding: 1.5rem 1.5rem 1.6rem; min-height: 290px; user-select: none;
+  transition: transform .5s var(--ease), box-shadow .5s var(--ease), background .5s;
+}
+.skill-card.is-active { background: linear-gradient(180deg, #f4f4f6, #fff 60%); box-shadow: 0 30px 70px -28px rgba(0, 0, 0, .28); transform: translateY(-6px); border-color: #d6d6d6; }
+.skill-icon {
+  width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; font-size: 1.15rem;
+  border: 1px solid rgba(0, 0, 0, .06); margin-bottom: 1rem;
+}
+.skill-ghost { position: absolute; top: .8rem; right: 1.1rem; font-size: 4.8rem; font-weight: 900; letter-spacing: -.06em; color: rgba(0, 0, 0, .04); line-height: 1; }
+.skill-num { position: absolute; top: 2.2rem; right: 1.5rem; font-weight: 700; color: #a8a8a8; font-size: .8rem; }
+.skill-card h3 { font-size: 1.15rem; font-weight: 800; letter-spacing: -.03em; margin-bottom: 1rem; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+.skill-tag {
+  display: inline-flex; align-items: center; gap: .35rem;
+  border: 1px solid var(--line); border-radius: 999px; padding: .28rem .65rem;
+  font-size: .78rem; font-weight: 600; color: #333; background: #fff;
+}
+.skill-tag i { font-size: .78rem; }
+.skills-dots { display: flex; justify-content: center; gap: .7rem; margin-top: .5rem; }
+.skills-dots button { width: 32px; height: 3px; border: 0; padding: 0; border-radius: 3px; background: #d8d8d8; transition: width .3s, background .3s; }
+.skills-dots button.active { width: 46px; background: var(--ink); }

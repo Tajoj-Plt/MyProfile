@@ -1,0 +1,19 @@
+/* ================= Arabic / RTL ================= */
+[dir="rtl"] body { font-family: "IBM Plex Sans Arabic", Inter, system-ui, sans-serif; }
+[dir="rtl"] body * { letter-spacing: 0 !important; }
+[dir="rtl"] .hero-name, [dir="rtl"] .hero-name * { font-family: Inter, system-ui, sans-serif; letter-spacing: -.045em !important; }
+[dir="rtl"] .ticker .tech { font-family: Inter, system-ui, sans-serif; }
+[dir="rtl"] :is(.section-title, .hero-title, .dark-title, .svc-card h3, .skill-card h3, .form-card h3, .footer-name) { line-height: 1.35; font-weight: 700; }
+[dir="rtl"] .hero-title { font-weight: 700; }
+[dir="rtl"] .split .w { padding-bottom: .3em; margin-bottom: -.3em; padding-top: .1em; }
+[dir="rtl"] .skill-card { direction: rtl; }
+[dir="rtl"] .svc-num, [dir="rtl"] .svc-ghost { left: auto; right: 1.4rem; }
+[dir="rtl"] .svc-arrow { right: auto; left: 1.4rem; }
+[dir="rtl"] .skill-ghost { right: auto; left: 1.1rem; }
+[dir="rtl"] .skill-num { right: auto; left: 1.5rem; }
+[dir="rtl"] .scroll-progress { transform-origin: right; }
+[dir="rtl"] .bi-arrow-up-right { display: inline-block; transform: scaleX(-1); }
+[dir="rtl"] .btn-ink:hover i.bi-arrow-up-right { transform: scaleX(-1) translate(2px, -2px); }
+[dir="rtl"] .footer-link:hover { transform: translateX(-4px); }
+[dir="rtl"] .social-chip:hover { transform: translateX(4px); }
+[dir="rtl"] :is(input[type="tel"], input[type="url"], input[type="email"]) { direction: ltr; text-align: right; }

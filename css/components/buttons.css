@@ -1,0 +1,31 @@
+/* ---------------- Buttons ---------------- */
+.btn-ink {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: var(--ink); color: #fff !important;
+  padding: .7rem 1.25rem; border-radius: 999px; white-space: nowrap;
+  font-weight: 600; font-size: .95rem; border: 0;
+  box-shadow: 0 14px 30px -12px rgba(0, 0, 0, .55);
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), background .3s;
+}
+.btn-ink:hover { transform: translateY(-2px); background: #1d1d1d; box-shadow: 0 20px 36px -14px rgba(0, 0, 0, .6); }
+.btn-ink i { transition: transform .3s var(--ease); }
+.btn-ink:hover i { transform: translate(2px, -2px); }
+.btn-lg-x { padding: 1rem 1.6rem; font-size: 1rem; }
+
+.btn-whatsapp {
+  display: inline-flex; align-items: center; gap: .6rem;
+  background: #25d366; color: #fff; font-weight: 600;
+  padding: 1rem 1.6rem; border-radius: 999px;
+  box-shadow: 0 16px 36px -14px rgba(37, 211, 102, .7);
+  transition: transform .3s var(--ease);
+}
+.btn-whatsapp i { font-size: 1.25rem; }
+.btn-whatsapp:hover { transform: translateY(-2px); color: #fff; }
+
+.btn-ghost-x {
+  display: inline-flex; align-items: center;
+  background: #fff; border: 1px solid var(--line);
+  padding: 1rem 1.6rem; border-radius: 999px; font-weight: 600;
+  transition: border-color .3s, transform .3s var(--ease);
+}
+.btn-ghost-x:hover { border-color: var(--ink); transform: translateY(-2px); }
