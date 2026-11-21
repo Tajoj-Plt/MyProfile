@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tajoj-plt · Altgani Motasim</title>
+  <meta name="description" content="tajoj-plt: the portfolio of Altgani Motasim, Senior Data Engineer: data pipelines, analytics, and the Atnii Square platform.">
+  <link rel="icon" href="assets/logo-mark.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Pick language + theme before first paint (saved choice, ?lang=ar, or system theme) -->
+  <script>
+    (function () {
+      var d = document.documentElement, store = null;
+      try { store = window.localStorage; } catch (e) {}
+      var get = function (k) { try { return store && store.getItem(k); } catch (e) { return null; } };
+      var lang = new URLSearchParams(location.search).get('lang') || get('lang') || 'en';
+      var theme = get('theme') === 'dark' ? 'dark' : 'light';
+      d.lang = lang === 'ar' ? 'ar' : 'en';
+      d.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      d.setAttribute('data-theme', theme);
+      d.setAttribute('data-bs-theme', theme);
+    })();
+  </script>
+
+  <!-- Bootstrap: grid, offcanvas, dropdown, toast, form validation (RTL build swapped in for Arabic) -->
+  <link id="bsCss" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script>
+    if (document.documentElement.dir === 'rtl') document.getElementById('bsCss').href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css';
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Tailwind (CDN). Prefixed with tw- and preflight off so it never fights Bootstrap. -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      prefix: 'tw-',
+      corePlugins: { preflight: false },
+      theme: {
+        extend: {
+          colors: {
+            ink: '#050505',
+            violet: { DEFAULT: '#4830e8', soft: '#8f69e3', moon: '#d8dbfe' },
+            mint: '#66ddd7',
+            pop: '#ace2a4',
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+
+  <link href="css/style.css?v=58" rel="stylesheet">
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="tw-flex tw-items-center tw-justify-between tw-gap-4 tw-px-4 md:tw-px-10 tw-py-4">
+      <a href="#contact" class="status-pill">
+        <span class="status-dot"></span>
+        <span>Available for work</span>
+      </a>
+
+      <nav id="mainNav" class="d-none d-lg-flex tw-items-center tw-gap-6 xl:tw-gap-8">
+        <a class="nav-link-x active" href="#hero">Home</a>
+        <a class="nav-link-x" href="#services">What I Do</a>
+        <a class="nav-link-x" href="#journey">Journey</a>
+        <a class="nav-link-x" href="#work">Work</a>
+        <a class="nav-link-x" href="#articles">Articles</a>
+        <a class="nav-link-x" href="#contact">Contact</a>
+      </nav>
+
+      <div class="tw-flex tw-items-center tw-gap-3">
+        <button class="icon-btn theme-toggle d-none d-lg-grid" type="button" aria-label="Toggle dark mode">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+        <div class="dropdown d-none d-lg-block">
+          <button class="lang-pill dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="tw-text-base lang-flag">🇬🇧</span> <span class="lang-name">English</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end lang-menu">
+            <li><a class="dropdown-item" href="#" data-lang="en">🇬🇧 English</a></li>
+            <li><a class="dropdown-item" href="#" data-lang="ar" dir="rtl">🇸🇩 العربية</a></li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn-ink d-none d-lg-inline-flex">Let's Talk <i class="bi bi-arrow-up-right"></i></a>
+        <button class="menu-btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Open menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="offcanvas offcanvas-end mobile-menu" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header justify-content-end">
+      <h2 class="visually-hidden" id="mobileMenuLabel">Menu</h2>
+      <button type="button" class="menu-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="offcanvas-body tw-flex tw-flex-col tw-gap-2">
+      <a class="mobile-link" href="#hero" data-menu-link>Home <span>01</span></a>
+      <a class="mobile-link" href="#services" data-menu-link>What I Do <span>02</span></a>
+      <a class="mobile-link" href="#journey" data-menu-link>Journey <span>03</span></a>
+      <a class="mobile-link" href="#work" data-menu-link>Work <span>04</span></a>
+      <a class="mobile-link" href="#articles" data-menu-link>Articles <span>05</span></a>
+      <a class="mobile-link" href="#contact" data-menu-link>Contact <span>06</span></a>
+      <div class="menu-settings tw-mt-auto">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+        <button class="icon-btn" type="button" data-lang-switch aria-label="Switch language">
+          <span class="lang-short">ع</span>
+        </button>
+      </div>
+      <a href="#contact" class="btn-ink tw-justify-center" data-menu-link>Let's Talk <i class="bi bi-arrow-up-right"></i></a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="hero" class="hero">
+      <div class="hero-bg"></div>
+      <h2 class="hero-name" aria-label="Altgani Motasim" dir="ltr">
+        <span class="outline">ALTGANI</span><span class="solid">MOTASIM</span>
+      </h2>
+
+      <div class="container-xl tw-relative">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <h1 class="hero-title reveal" data-i18n="heroTitle">Senior-Data<br>Engineer</h1>
+            <p class="hero-copy reveal" style="--d:.1s">
+              I design and build reliable data platforms — pipelines, warehouses, dashboards, and AI-ready data — that turn messy information into clear decisions, from field surveys to production apps.
+            </p>
+            <a href="#contact" class="btn-ink btn-lg-x reveal" style="--d:.2s">Let's collaborate <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+
+          <div class="portrait-wrap reveal">
+            <img src="assets/hero-cutout.png" alt="Altgani Motasim" class="portrait" id="heroImg">
+            <div class="portrait-fallback" aria-hidden="true"><i class="bi bi-person"></i><small>Add web/assets/hero.webp</small></div>
+          </div>
+
+          <div class="socials reveal" style="--d:.15s">
+            <a href="https://github.com/Tajoj-Plt?tab=repositories" target="_blank" rel="noopener" class="social-chip"><i class="bi bi-github"></i> GitHub <i class="bi bi-arrow-up-right tw-ms-auto"></i></a>
+            <a href="https://www.facebook.com/altjany.m.tsm" target="_blank" rel="noopener" class="social-chip"><i class="bi bi-facebook"></i> Facebook <i class="bi bi-arrow-up-right tw-ms-auto"></i></a>
+            <a href="mailto:t.motasim19960@gmail.com" class="social-chip"><i class="bi bi-envelope-fill"></i> Gmail <i class="bi bi-arrow-up-right tw-ms-auto"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TICKER ============ -->
+    <div class="ticker" aria-hidden="true" dir="ltr">
+      <div class="ticker-track"><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/python.svg);--c:#3776AB"></i>Python</span><span class="tech"><i class="bi bi-database-fill tech-bi" style="--c:#336791"></i>SQL</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/apachespark.svg);--c:#E25A1C"></i>Apache Spark</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/apacheairflow.svg);--c:#017CEE"></i>Airflow</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/apachekafka.svg);--c:#231F20"></i>Kafka</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/dbt.svg);--c:#FF694B"></i>dbt</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/snowflake.svg);--c:#29B5E8"></i>Snowflake</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/googlebigquery.svg);--c:#669DF6"></i>BigQuery</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/databricks.svg);--c:#FF3621"></i>Databricks</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/amazonaws.svg);--c:#FF9900"></i>AWS</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/postgresql.svg);--c:#4169E1"></i>PostgreSQL</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/docker.svg);--c:#2496ED"></i>Docker</span><span class="tech"><i class="bi bi-bar-chart-line-fill tech-bi" style="--c:#1a73e8"></i>ActivityInfo</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/arcgis.svg);--c:#2C7AC3"></i>ArcGIS</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/powerbi.svg);--c:#F2C811"></i>Power BI</span><span class="tech"><i class="bi bi-clipboard2-data-fill tech-bi" style="--c:#2095f3"></i>KoboToolbox</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/python.svg);--c:#3776AB"></i>Python</span><span class="tech"><i class="bi bi-database-fill tech-bi" style="--c:#336791"></i>SQL</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/apachespark.svg);--c:#E25A1C"></i>Apache Spark</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/apacheairflow.svg);--c:#017CEE"></i>Airflow</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/apachekafka.svg);--c:#231F20"></i>Kafka</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/dbt.svg);--c:#FF694B"></i>dbt</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/snowflake.svg);--c:#29B5E8"></i>Snowflake</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/googlebigquery.svg);--c:#669DF6"></i>BigQuery</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/databricks.svg);--c:#FF3621"></i>Databricks</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/amazonaws.svg);--c:#FF9900"></i>AWS</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/postgresql.svg);--c:#4169E1"></i>PostgreSQL</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/docker.svg);--c:#2496ED"></i>Docker</span><span class="tech"><i class="bi bi-bar-chart-line-fill tech-bi" style="--c:#1a73e8"></i>ActivityInfo</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/arcgis.svg);--c:#2C7AC3"></i>ArcGIS</span><span class="tech"><i class="tech-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/powerbi.svg);--c:#F2C811"></i>Power BI</span><span class="tech"><i class="bi bi-clipboard2-data-fill tech-bi" style="--c:#2095f3"></i>KoboToolbox</span></div>
+    </div>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="section">
+      <div class="container-xl tw-relative">
+        <div class="watermark">CAPABILITIES</div>
+        <div class="eyebrow reveal">What I deliver clearly</div>
+        <div class="row g-4 align-items-end tw-mb-12">
+          <div class="col-lg-7"><h2 class="section-title reveal" data-i18n="servicesTitle">From idea to<br>production-ready<br>product.</h2></div>
+          <div class="col-lg-5"><p class="section-lead reveal" style="--d:.1s">I build fast, reliable, and scalable data and digital products across web, mobile, and AI — with attention to clarity, performance, and real impact.</p></div>
+        </div>
+
+        <div class="row g-3 g-lg-4">
+          <div class="col-sm-6 col-lg-3">
+            <article class="svc-card reveal is-featured">
+              <span class="svc-num">01</span><span class="svc-ghost">01</span>
+              <span class="svc-arrow"><i class="bi bi-arrow-up-right"></i></span>
+              <h3>Data Pipelines</h3>
+              <p>Automated ingestion and ETL/ELT with Airflow and dbt, tested so data arrives clean and on time.</p>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <article class="svc-card reveal" style="--d:.08s">
+              <span class="svc-num">02</span><span class="svc-ghost">02</span>
+              <span class="svc-arrow"><i class="bi bi-arrow-up-right"></i></span>
+              <h3>Data Warehouses</h3>
+              <p>Clear models, stable keys, and shared metrics in a warehouse teams can trust.</p>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <article class="svc-card reveal" style="--d:.16s">
+              <span class="svc-num">03</span><span class="svc-ghost">03</span>
+              <span class="svc-arrow"><i class="bi bi-arrow-up-right"></i></span>
+              <h3>Dashboards &amp; Maps</h3>
+              <p>Power BI dashboards and ArcGIS maps that answer real questions at a glance.</p>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <article class="svc-card reveal" style="--d:.24s">
+              <span class="svc-num">04</span><span class="svc-ghost">04</span>
+              <span class="svc-arrow"><i class="bi bi-arrow-up-right"></i></span>
+              <h3>AI-Ready Data</h3>
+              <p>Cleaned, labeled, and documented data that makes AI features accurate and fair.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section tw-overflow-hidden">
+      <div class="container-xl tw-relative">
+        <div class="watermark">STACK</div>
+        <div class="eyebrow reveal">Tools &amp; technologies</div>
+        <div class="row g-4 align-items-end tw-mb-12">
+          <div class="col-lg-7"><h2 class="section-title reveal" data-i18n="skillsTitle">A stack built for<br>shipping real products.</h2></div>
+          <div class="col-lg-5"><p class="section-lead reveal" style="--d:.1s">Mobile, backend, AI, and delivery — the skills behind every release, from cross-platform apps to clean code and production-grade quality.</p></div>
+        </div>
+      </div>
+
+      <div class="skills-track" id="skillsTrack" dir="ltr">
+        <!-- cards injected by js/main.js -->
+      </div>
+      <div class="skills-dots" id="skillsDots"></div>
+    </section>
+
+    <!-- ============ JOURNEY (dark panel) ============ -->
+    <section id="journey" class="section">
+      <div class="container-xl tw-relative">
+        <div class="watermark">JOURNEY</div>
+        <div class="eyebrow eyebrow-soft reveal">A journey of execution and growth</div>
+        <div class="dark-panel reveal">
+          <div class="tw-flex tw-flex-wrap tw-items-end tw-justify-between tw-gap-3 tw-mb-8">
+            <h2 class="dark-title">/JOURNEY</h2>
+            <span class="dark-sub">Since 2019</span>
+          </div>
+          <div class="xp-row reveal">
+            <div><h4>Al Neelain University</h4><small>Sudan</small></div>
+            <div class="xp-role">Programming Language Assistant Teacher</div>
+            <div class="xp-date">2019 – 2020</div>
+          </div>
+          <div class="xp-row reveal">
+            <div><h4>CompuLearn</h4><small>United Arab Emirates</small></div>
+            <div class="xp-role">Mobile Apps Developer</div>
+            <div class="xp-date">2021 – 2022</div>
+          </div>
+          <div class="xp-row reveal xp-extra">
+            <div><h4>Melania Hotel</h4><small>Saudi Arabia</small></div>
+            <div class="xp-role">Technical Lead</div>
+            <div class="xp-date">2022 – 2025</div>
+          </div>
+          <div class="xp-row reveal xp-extra">
+            <div><h4>Self-employed</h4><small>Independent</small></div>
+            <div class="xp-role">Data Engineer</div>
+            <div class="xp-date">2026 – Present</div>
+          </div>
+          <button class="xp-more" type="button" id="xpMore" aria-expanded="false">
+            <span class="more-label">Show more</span> <i class="bi bi-chevron-down"></i>
+          </button>
+        </div>
+
+        <div class="certs" id="certificates">
+          <div class="eyebrow reveal">Training &amp; certificates</div>
+          <div class="cert-track">
+            <figure class="cert-card reveal" style="--d:0.00s">
+              <button class="cert-img" type="button" data-bs-toggle="modal" data-bs-target="#certModal" data-cert="assets/cert-pmp.jpg" data-cert-title="Project Management Professional (PMP)®" aria-label="View PMP certificate">
+                <img src="assets/cert-pmp.jpg" alt="Project Management Professional (PMP)® certificate" loading="lazy" decoding="async">
+                <span class="cert-zoom"><i class="bi bi-arrows-angle-expand"></i></span>
+              </button>
+              <figcaption>
+                <span class="cert-issuer"><i class="bi bi-patch-check-fill"></i>Project Management Institute</span>
+                <h4>Project Management Professional (PMP)®</h4>
+                <span class="cert-meta"><span>Issued 11 Feb 2026</span><span>Valid until 11 Feb 2029</span></span>
+              </figcaption>
+            </figure>
+            <figure class="cert-card reveal" style="--d:0.08s">
+              <button class="cert-img" type="button" data-bs-toggle="modal" data-bs-target="#certModal" data-cert="assets/cert-pmi-pba.jpg" data-cert-title="PMI Professional in Business Analysis (PMI-PBA)®" aria-label="View PMI-PBA certificate">
+                <img src="assets/cert-pmi-pba.jpg" alt="PMI Professional in Business Analysis (PMI-PBA)® certificate" loading="lazy" decoding="async">
+                <span class="cert-zoom"><i class="bi bi-arrows-angle-expand"></i></span>
+              </button>
+              <figcaption>
+                <span class="cert-issuer"><i class="bi bi-patch-check-fill"></i>Project Management Institute</span>
+                <h4>PMI Professional in Business Analysis (PMI-PBA)®</h4>
+                <span class="cert-meta"><span>Issued 09 Feb 2026</span><span>Valid until 09 Feb 2029</span></span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section id="work" class="section">
+      <div class="container-xl tw-relative">
+        <div class="watermark">WORK</div>
+        <div class="eyebrow reveal">Selected work, built with care</div>
+        <div class="row g-5 align-items-center work-row">
+          <div class="col-lg-6 work-copy">
+            <h2 class="section-title reveal" data-i18n="workTitle">Atnii Square — a knowledge<br>community for Sudan</h2>
+            <p class="section-lead tw-mt-5 reveal" style="--d:.1s">
+              A Sudanese knowledge app where people share and discuss in a community feed and groups, read in a shared library of books, articles, and videos, and ask “Ask about Sudan”, an AI assistant that answers from trusted sources with citations.
+            </p>
+            <div class="tw-grid tw-grid-cols-1 sm:tw-grid-cols-3 tw-gap-3 tw-mt-6 reveal" style="--d:.2s">
+              <div class="feat-chip">Community &amp; groups</div>
+              <div class="feat-chip">Shared library</div>
+              <div class="feat-chip">Ask about Sudan AI</div>
+            </div>
+            <div class="eyebrow tw-mt-8 tw-mb-3 reveal" style="--d:.25s">Built with</div>
+            <div class="tw-flex tw-flex-wrap tw-gap-2 reveal" style="--d:.25s">
+              <span class="tag">React Native</span><span class="tag">TypeScript</span><span class="tag">RAG</span>
+              <span class="tag">RTL</span><span class="tag">Clean Architecture</span>
+            </div>
+            <a href="work.html" class="btn-ink btn-lg-x tw-mt-8 reveal" style="--d:.3s">View more projects <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+
+          <div class="col-lg-6 work-media">
+            <div class="phones reveal" id="phones" data-front="a">
+              <div class="phone phone-a">
+                <div class="phone-screen shot light"><img src="assets/app-welcome.jpg" alt="Atnii Square app: welcome screen" loading="lazy" decoding="async"></div>
+              </div>
+              <div class="phone phone-b">
+                <div class="phone-screen shot light"><img src="assets/app-join.jpg" alt="Atnii Square app: join the community" loading="lazy" decoding="async"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ARTICLES ============ -->
+    <section id="articles" class="section">
+      <div class="container-xl tw-relative">
+        <div class="watermark">ARTICLES</div>
+        <div class="eyebrow reveal">Articles &amp; insights</div>
+        <div class="row g-5">
+          <div class="col-lg-7">
+            <div class="article-list" id="articleList"><!-- rendered from js/articles.js --></div>
+            <button class="btn-ghost-x articles-more reveal" type="button" id="articlesMore" aria-expanded="false" aria-controls="articleList">
+              <span class="more-label">Show more</span> <i class="bi bi-chevron-down"></i>
+            </button>
+          </div>
+          <div class="col-lg-5">
+            <div class="articles-intro">
+              <h2 class="section-title reveal" data-i18n="articlesTitle">Notes from building<br>with data.</h2>
+              <p class="section-lead tw-mt-5 reveal" style="--d:.1s">Write-ups on data engineering, analytics, and the lessons behind Atnii Square, shared to help other builders move faster.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container-xl tw-relative">
+        <div class="watermark">CONTACT</div>
+        <div class="eyebrow reveal">Let's build something meaningful</div>
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <span class="accent-line reveal"></span>
+            <h2 class="section-title reveal" data-i18n="contactTitle">Have a project<br>in mind?</h2>
+            <p class="section-lead tw-mt-5 reveal" style="--d:.1s">
+              Tell me about your idea, and I'll help shape it into a clear, launch-ready product — whether it's a data pipeline, a dashboard, a mobile app, an AI feature, or a complete digital ecosystem.
+            </p>
+            <div class="tw-flex tw-flex-wrap tw-gap-3 tw-mt-7 reveal" style="--d:.15s">
+              <a href="https://wa.me/" target="_blank" rel="noopener" class="btn-whatsapp"><i class="bi bi-whatsapp"></i> Contact on WhatsApp</a>
+              <a href="work.html" class="btn-ghost-x">View more work</a>
+            </div>
+            <div class="steps reveal" style="--d:.2s">
+              <span><b>01</b>Idea discovery</span><span><b>02</b>Planning</span><span><b>03</b>Market research</span>
+              <span><b>04</b>Execution</span><span><b>05</b>Testing</span><span><b>06</b>Launch</span>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <form class="form-card reveal needs-validation" id="contactForm" novalidate>
+              <h3>Share your project details</h3>
+              <p>Share the essentials, and I'll reply with practical next steps for your project.</p>
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label" for="f-url">Website URL <span class="tw-text-neutral-400">(optional)</span></label>
+                  <input class="form-control fx" id="f-url" type="url" placeholder="https://">
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="f-name">Name</label>
+                  <input class="form-control fx" id="f-name" required>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="f-email">Email</label>
+                  <input class="form-control fx" id="f-email" type="email" required>
+                  <div class="invalid-feedback">Please enter a valid email.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="f-phone">Phone number</label>
+                  <input class="form-control fx" id="f-phone" type="tel" placeholder="+249 ••• ••• •••">
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="f-type">Project type</label>
+                  <select class="form-select fx" id="f-type" required>
+                    <option value="" selected disabled>Choose project type</option>
+                    <option>Data pipeline / ETL</option><option>Data warehouse</option><option>Dashboards &amp; reporting</option>
+                    <option>GIS &amp; maps</option><option>Survey data (KoboToolbox, ActivityInfo)</option>
+                    <option>AI-ready data</option><option>Something else</option>
+                  </select>
+                  <div class="invalid-feedback">Pick a project type.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="f-brief">Short project brief</label>
+                  <textarea class="form-control fx" id="f-brief" rows="4" required></textarea>
+                  <div class="invalid-feedback">A sentence or two is enough.</div>
+                </div>
+                <div class="col-12">
+                  <button class="btn-ink tw-w-full tw-justify-center tw-py-3" type="submit">Send request</button>
+                  <p class="tw-text-center tw-text-xs tw-text-neutral-500 tw-mt-3 tw-mb-0">Your request goes straight to my inbox. WhatsApp is still available if you prefer a faster reply.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container-xl">
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <h3 class="footer-name">Altgani Motasim</h3>
+          <p class="footer-tag">From raw data to clear decisions — I build systems that launch and endure.</p>
+          <span class="footer-line"></span>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="footer-label">Explore</div>
+          <a class="footer-link" href="#hero">Home <i class="bi bi-arrow-up-right"></i></a>
+          <a class="footer-link" href="#services">What I Do <i class="bi bi-arrow-up-right"></i></a>
+          <a class="footer-link" href="#journey">Journey <i class="bi bi-arrow-up-right"></i></a>
+          <a class="footer-link" href="#work">Work <i class="bi bi-arrow-up-right"></i></a>
+          <a class="footer-link" href="#articles">Articles <i class="bi bi-arrow-up-right"></i></a>
+          <a class="footer-link" href="#contact">Contact <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="footer-label">Social</div>
+          <a class="footer-link" href="#"><span><i class="bi bi-linkedin"></i>LinkedIn</span> <i class="bi bi-arrow-up-right"></i></a>
+          <a class="footer-link" href="https://github.com/Tajoj-Plt?tab=repositories" target="_blank" rel="noopener"><span><i class="bi bi-github"></i>GitHub</span> <i class="bi bi-arrow-up-right"></i></a>
+          <a class="footer-link" href="#"><span><i class="bi bi-tiktok"></i>TikTok</span> <i class="bi bi-arrow-up-right"></i></a>
+          <a class="footer-link" href="https://www.facebook.com/altjany.m.tsm" target="_blank" rel="noopener"><span><i class="bi bi-facebook"></i>Facebook</span> <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <small>© <span id="year"></span> tajoj-plt · Altgani Motasim. All rights reserved.</small>
+        <div class="tw-flex tw-items-center tw-gap-6">
+          <a href="#hero" class="back-top">Back to top <i class="bi bi-arrow-up"></i></a>
+          <a href="#contact" class="btn-ink">Let's Talk <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating contact button -->
+  <div class="fab" id="fab">
+    <div class="fab-menu" id="fabMenu" aria-hidden="true">
+      <a href="mailto:t.motasim19960@gmail.com" class="fab-item" tabindex="-1">
+        <span class="fab-label">Gmail</span><span class="fab-mini"><i class="tech-logo gmail-logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/gmail.svg);--c:currentColor"></i></span>
+      </a>
+      <a href="https://www.facebook.com/altjany.m.tsm" class="fab-item" target="_blank" rel="noopener" tabindex="-1">
+        <span class="fab-label">Facebook</span><span class="fab-mini"><i class="bi bi-facebook"></i></span>
+      </a>
+      <a href="https://github.com/Tajoj-Plt?tab=repositories" class="fab-item" target="_blank" rel="noopener" tabindex="-1">
+        <span class="fab-label">GitHub</span><span class="fab-mini"><i class="bi bi-github"></i></span>
+      </a>
+    </div>
+    <button class="fab-main" id="fabBtn" aria-expanded="false" aria-controls="fabMenu" aria-label="Contact">
+      <i class="bi bi-chat-dots-fill fab-ico-open"></i><i class="bi bi-x-lg fab-ico-close"></i>
+    </button>
+  </div>
+
+  <!-- Certificate viewer -->
+  <div class="modal fade" id="certModal" tabindex="-1" aria-labelledby="certModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content cert-modal">
+        <div class="modal-header">
+          <h5 class="modal-title" id="certModalTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body"><img src="" alt="" id="certModalImg"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
+    <div id="sentToast" class="toast align-items-center text-bg-dark border-0" role="status" aria-live="polite">
+      <div class="d-flex">
+        <div class="toast-body"><i class="bi bi-check-circle tw-me-2 tw-text-pop"></i>Thanks! I'll get back to you shortly.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/articles.js?v=57"></script>
+  <script src="js/main.js?v=57"></script>
+</body>
+</html>
