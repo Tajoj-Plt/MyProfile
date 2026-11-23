@@ -2,8 +2,9 @@
 import { articlePhoto, articleUrl } from '../models/articles.js';
 
 /** One list row. Rows at index >= extraFrom start hidden behind "Show more". */
-export function articleRowHtml(a, i, lang, { extraFrom = null, stagger = 3 } = {}) {
-  const extra = extraFrom != null && i >= extraFrom ? ' is-extra' : '';
+export function articleRowHtml(a, i, lang, { extraFrom = null, extraFromMobile = null, stagger = 3 } = {}) {
+  const extra = (extraFrom != null && i >= extraFrom ? ' is-extra' : '')
+    + (extraFromMobile != null && i >= extraFromMobile ? ' is-extra-sm' : '');
   return `<a href="${articleUrl(a)}" class="article-row reveal${extra}" style="--d:${((i % stagger) * 0.06).toFixed(2)}s">
       <span class="article-thumb" style="--g1:${a.g1};--g2:${a.g2}"><img src="${articlePhoto(a, 240, 240)}" alt="" loading="lazy" decoding="async"></span>
       <span class="article-info">
@@ -15,8 +16,9 @@ export function articleRowHtml(a, i, lang, { extraFrom = null, stagger = 3 } = {
     </a>`;
 }
 
-export function renderArticleList(container, articles, lang, visible) {
-  container.innerHTML = articles.map((a, i) => articleRowHtml(a, i, lang, { extraFrom: visible, stagger: visible })).join('');
+/** Rows past `visible` hide behind "Show more"; on phones, rows past `visibleMobile` do too. */
+export function renderArticleList(container, articles, lang, visible, visibleMobile = visible) {
+  container.innerHTML = articles.map((a, i) => articleRowHtml(a, i, lang, { extraFrom: visible, extraFromMobile: visibleMobile, stagger: visible })).join('');
 }
 
 const part = (page, name) => page.querySelector(`[data-article="${name}"]`);

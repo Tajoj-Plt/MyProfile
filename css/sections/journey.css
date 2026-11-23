@@ -15,6 +15,11 @@
 .xp-row:last-child { border-bottom: 0; }
 .xp-row.xp-extra { display: none; }
 .dark-panel.show-all .xp-row.xp-extra { display: grid; }
+/* Phones show only the first job until "Show more" */
+@media (max-width: 767.98px) {
+  .xp-row.xp-extra-sm { display: none; }
+  .dark-panel.show-all .xp-row.xp-extra-sm { display: grid; }
+}
 .xp-more {
   display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.6rem;
   background: transparent; color: #fff; border: 1px solid rgba(255, 255, 255, .25); border-radius: 999px;

@@ -11,6 +11,7 @@
  */
 import { renderSkillsSection, initSkillsCarousel } from './controllers/skillsController.js';
 import { renderArticles } from './controllers/articlesController.js';
+import { renderProjectList } from './controllers/projectsController.js';
 import { initLanguage } from './controllers/languageController.js';
 import { initTheme } from './controllers/themeController.js';
 import { initNavigation } from './controllers/navigationController.js';
@@ -22,6 +23,7 @@ import { byId } from './utils/dom.js';
 // 1. Content built from models
 const skills = renderSkillsSection();
 renderArticles();
+renderProjectList();
 
 // 2. Language and theme
 initLanguage();

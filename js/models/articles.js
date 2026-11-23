@@ -4,6 +4,50 @@
  */
 export const ARTICLES = [
   {
+    slug: 'story-behind-atnii-square',
+    photo: '1481627834876-b7833e8f5570',
+    icon: 'bi-book', g1: '#b45309', g2: '#f59e0b', mins: 4,
+    date: { en: 'Nov 2026', ar: 'نوفمبر 2026' },
+    cat: { en: 'Atnii Square', ar: 'أتنيه' },
+    title: { en: 'The story behind Atnii Square', ar: 'الحكاية وراء أتنيه' },
+    excerpt: {
+      en: 'How an interest in Sudanese heritage grew into an open, independent knowledge ecosystem for Sudan.',
+      ar: 'كيف تحوّل الاهتمام بالتراث السوداني إلى منظومة معرفية سودانية مستقلة ومفتوحة المصدر.',
+    },
+    body: {
+      en: `<p>About two years ago, I developed a growing interest in Sudanese heritage. I began reading about the cultural, social, intellectual, and religious life of Sudan, and about everything that shapes the country. Along the way, I met and listened to people who have contributed to this heritage in different ways, including artists, academics, politicians, and religious scholars.</p>
+<p>What stood out to me most was the richness of Sudan's intellectual and cultural output in almost every field. This left a strong impression on me and grew into a real passion. I did not only want to collect and document this heritage in an organized way. I wanted to find a way for people to engage with it, so that it could become real, productive knowledge.</p>
+<h2>From an idea to a name</h2>
+<p>I started a project that I first called "Sudan Electronic Library". It was later renamed "Suda Mind", then "Azza Mind", and finally "Atnii Square", a name chosen for its cultural meaning. The final name is still under legal review.</p>
+<h2>Built with the help of many people</h2>
+<p>I did not have expertise in every area the project touches, but my enthusiasm for it was strong. I sought advice from many people, including academics, intellectuals, and technical specialists. They were generous with their time and helped me in many ways.</p>
+<h2>The idea</h2>
+<p>The goal is to build a Sudanese knowledge ecosystem: one place that brings together Sudan's cultural and intellectual output and knowledge across all fields, where people can explore it, interact with it, and share it.</p>
+<h2>Where the project stands</h2>
+<p>The project is now complete and in the testing phase. In the coming period, before we release a beta version, I will share its main features. Your feedback will be very welcome.</p>
+<h2>Two important principles</h2>
+<ol>
+<li><strong>Independence.</strong> The project is fully independent. It does not serve any organization or any political or ideological direction. Its main purpose is to share Sudanese knowledge in all its aspects.</li>
+<li><strong>Open source.</strong> The project is open source at every level, and anyone interested is welcome to contribute to its development.</li>
+</ol>`,
+      ar: `<p>قبل نحو عامين بدأ لديّ اهتمام متزايد بالتراث السوداني عموماً، فأخذت أبحث وأطّلع على الحياة الثقافية والاجتماعية والفكرية والدينية، وعلى كل ما يشكّل السودان. والتقيت بشخصيات أضافت إلى التراث السوداني بطرق مختلفة واستمعت إليها، ومنهم فنانون وأكاديميون وسياسيون ورجال دين.</p>
+<p>لفت نظري غزارة الإنتاج الفكري والثقافي لدينا في كل المجالات تقريباً، وتأثرت بذلك كثيراً حتى نما لديّ شغف كبير، لا بجمع هذا التراث وتوثيقه بشكل منظم فحسب، بل بالتفكير في كيفية تفاعل الناس معه ليتحول إلى معرفة حقيقية منتجة.</p>
+<h2>من فكرة إلى اسم</h2>
+<p>بدأت حينها مشروعاً سمّيته "مكتبة السودان الإلكترونية"، ثم غيّرته إلى "Suda Mind"، ثم "Azza Mind"، إلى أن وصلنا إلى "أتنيه اسكوير" لرمزية الاسم الثقافية، ولا يزال الاسم قيد التحقق من الناحية القانونية.</p>
+<h2>بمساعدة كثيرين</h2>
+<p>رغم قصور معرفتي في جوانب كثيرة تتعلق بالمشروع، كنت متحمساً له جداً، فاستعنت بمشورة كثيرين من الأكاديميين والمثقفين والتقنيين، وقد أفادوني في نواحٍ كثيرة ولم يقصّروا.</p>
+<h2>الفكرة</h2>
+<p>الفكرة عموماً هي بناء منظومة معرفية سودانية تضم كل النتاج الثقافي والفكري والمعرفة السودانية في جميع المجالات، يتفاعل معها الناس ويشاركونها.</p>
+<h2>أين وصل المشروع</h2>
+<p>الحمد لله، اكتمل المشروع الآن وهو في مرحلة الاختبار، وفيه مجموعة من الخصائص سأشارككم إياها في الفترة القادمة قبل إطلاق نسخة تجريبية، ونرحب جداً بآرائكم.</p>
+<h2>أمران مهمان</h2>
+<ol>
+<li><strong>الاستقلالية.</strong> المشروع مستقل تماماً ولا يخدم أي جهة أو توجه، وهدفه الأساسي نشر المعرفة السودانية بكل جوانبها ومشاركتها.</li>
+<li><strong>مفتوح المصدر.</strong> المشروع مفتوح المصدر على كل مستوياته، ومتاح للتطوير من قبل أي شخص مهتم.</li>
+</ol>`,
+    },
+  },
+  {
     slug: 'airflow-dbt-pipelines',
     photo: '1558494949-ef010cbdcc31',
     icon: 'bi-diagram-3', g1: '#4830e8', g2: '#8f69e3', mins: 6,
@@ -71,134 +115,11 @@ export const ARTICLES = [
 <p>النتيجة مجموعة بيانات يثق بها المحللون وفرق البرامج، وتتحدث تلقائياً مع وصول مسوحات جديدة.</p>`,
     },
   },
-  {
-    slug: 'arcgis-power-bi-impact',
-    photo: '1524661135-423995f22d0b',
-    icon: 'bi-globe-americas', g1: '#16a34a', g2: '#ace2a4', mins: 5,
-    date: { en: 'Aug 2026', ar: 'أغسطس 2026' },
-    cat: { en: 'Visualization', ar: 'تصوير البيانات' },
-    title: { en: 'Mapping impact with ArcGIS and Power BI', ar: 'رسم خريطة الأثر باستخدام ArcGIS وPower BI' },
-    excerpt: {
-      en: 'Combining maps and dashboards to tell a clear story about where programs reach people.',
-      ar: 'الجمع بين الخرائط واللوحات لرواية قصة واضحة عن أماكن وصول البرامج إلى الناس.',
-    },
-    body: {
-      en: `<p>Tables tell you how much; maps tell you where. For programs that serve people across many locations, the "where" is often the first question decision makers ask. I use ArcGIS and Power BI together to answer both.</p>
-<h2>Start from a shared location key</h2>
-<p>Everything depends on joining data to places correctly. I keep one reference table of administrative areas with official codes and Arabic and English names, and every dataset is matched to it before it reaches a map.</p>
-<h2>Let each tool do what it is best at</h2>
-<p>ArcGIS handles spatial work: boundaries, distances, coverage areas, and layered maps. Power BI handles the numbers: trends, filters, and comparisons. Publishing ArcGIS layers into Power BI lets people click a region and see its indicators in the same view.</p>
-<h2>Design for the question, not the data</h2>
-<p>A good map answers one question clearly, such as which districts are under-served this month. I limit colors, use consistent scales across reports, and always show when the data was last updated.</p>
-<p>When maps and dashboards share the same clean data, teams spend less time arguing about numbers and more time acting on them.</p>`,
-      ar: `<p>الجداول تخبرك بالكمية، والخرائط تخبرك بالمكان. في البرامج التي تخدم الناس في مواقع كثيرة، يكون سؤال "أين؟" غالباً أول ما يطرحه صناع القرار. أستخدم ArcGIS وPower BI معاً للإجابة عن السؤالين.</p>
-<h2>ابدأ بمفتاح موقع مشترك</h2>
-<p>كل شيء يعتمد على ربط البيانات بالأماكن بشكل صحيح. أحتفظ بجدول مرجعي واحد للمناطق الإدارية برموزها الرسمية وأسمائها بالعربية والإنجليزية، وتُطابق كل مجموعة بيانات معه قبل أن تصل إلى أي خريطة.</p>
-<h2>دع كل أداة تفعل ما تجيده</h2>
-<p>يتولى ArcGIS العمل المكاني: الحدود والمسافات ومناطق التغطية والطبقات. ويتولى Power BI الأرقام: الاتجاهات والمرشحات والمقارنات. نشر طبقات ArcGIS داخل Power BI يتيح للمستخدم النقر على منطقة ورؤية مؤشراتها في الشاشة نفسها.</p>
-<h2>صمم للسؤال لا للبيانات</h2>
-<p>الخريطة الجيدة تجيب عن سؤال واحد بوضوح، مثل: أي المناطق لم تُخدم بما يكفي هذا الشهر؟ أقلل الألوان، وأستخدم مقاييس ثابتة بين التقارير، وأُظهر دائماً تاريخ آخر تحديث للبيانات.</p>
-<p>عندما تعتمد الخرائط واللوحات على البيانات النظيفة نفسها، تقضي الفرق وقتاً أقل في الجدال حول الأرقام ووقتاً أكثر في العمل بها.</p>`,
-    },
-  },
-  {
-    slug: 'learning-platform-warehouse',
-    photo: '1544383835-bda2bc66a55d',
-    icon: 'bi-database', g1: '#d97b2b', g2: '#f6c177', mins: 7,
-    date: { en: 'Jul 2026', ar: 'يوليو 2026' },
-    cat: { en: 'Analytics', ar: 'التحليلات' },
-    title: { en: 'Designing a data warehouse for a learning platform', ar: 'تصميم مستودع بيانات لمنصة تعليمية' },
-    excerpt: {
-      en: 'Choosing models, keys, and layers so product and impact questions are easy to answer.',
-      ar: 'اختيار النماذج والمفاتيح والطبقات لتسهل الإجابة عن أسئلة المنتج والأثر.',
-    },
-    body: {
-      en: `<p>A learning platform produces two kinds of questions. Product questions ask how people use the app. Impact questions ask whether learners actually improve. The Atnii Square warehouse is designed so both are easy to answer from the same tables.</p>
-<h2>Model around events and entities</h2>
-<p>Learners, mentors, courses, and lessons are entities with their own dimension tables. Things that happen, such as a lesson started, a quiz answered, or a session booked, are facts with timestamps that point to those entities.</p>
-<h2>Keep keys stable</h2>
-<p>Every entity gets a surrogate key that never changes, even if a learner updates their profile. Slowly changing details, such as school or region, are tracked over time so historical reports stay correct.</p>
-<h2>Build a few trusted metrics</h2>
-<p>Instead of letting every report compute "active learner" its own way, the warehouse defines it once. Shared metrics remove most arguments before they start.</p>
-<p>The goal is not the biggest warehouse but the clearest one: a small set of well-named tables that answer real questions quickly.</p>`,
-      ar: `<p>تطرح المنصة التعليمية نوعين من الأسئلة. أسئلة المنتج تسأل كيف يستخدم الناس التطبيق، وأسئلة الأثر تسأل هل يتحسن المتعلمون فعلاً. صُمم مستودع بيانات أتنيه لتسهل الإجابة عن النوعين من الجداول نفسها.</p>
-<h2>انمذج حول الأحداث والكيانات</h2>
-<p>المتعلمون والمرشدون والمقررات والدروس كيانات لكل منها جدول أبعاد خاص. أما ما يحدث، مثل بدء درس أو الإجابة عن اختبار أو حجز جلسة، فهي حقائق بأوقات محددة تشير إلى تلك الكيانات.</p>
-<h2>حافظ على ثبات المفاتيح</h2>
-<p>يحصل كل كيان على مفتاح بديل لا يتغير أبداً حتى لو حدّث المتعلم ملفه. وتُتتبع التفاصيل التي تتغير ببطء، مثل المدرسة أو المنطقة، عبر الزمن لتبقى التقارير التاريخية صحيحة.</p>
-<h2>ابنِ مقاييس قليلة موثوقة</h2>
-<p>بدلاً من أن يحسب كل تقرير "المتعلم النشط" بطريقته، يعرّفه المستودع مرة واحدة. المقاييس المشتركة تنهي معظم الخلافات قبل أن تبدأ.</p>
-<p>الهدف ليس أكبر مستودع بل أوضحه: مجموعة صغيرة من الجداول ذات الأسماء الواضحة تجيب عن الأسئلة الحقيقية بسرعة.</p>`,
-    },
-  },
-  {
-    slug: 'education-data-for-ai',
-    photo: '1677442136019-21780ecad995',
-    icon: 'bi-stars', g1: '#7c3aed', g2: '#c4b5fd', mins: 6,
-    date: { en: 'Jun 2026', ar: 'يونيو 2026' },
-    cat: { en: 'AI', ar: 'الذكاء الاصطناعي' },
-    title: { en: 'Making education data ready for AI features', ar: 'تجهيز بيانات التعليم لميزات الذكاء الاصطناعي' },
-    excerpt: {
-      en: 'Cleaning, labeling, and documenting data so AI features stay accurate and fair.',
-      ar: 'تنظيف البيانات وتوسيمها وتوثيقها لتبقى ميزات الذكاء الاصطناعي دقيقة وعادلة.',
-    },
-    body: {
-      en: `<p>AI features are only as good as the data they learn from and look things up in. Before Atnii Square's assistant could explain lessons or suggest practice, the content and learner data needed real preparation.</p>
-<h2>Clean and structure the content</h2>
-<p>Lessons were split into small, titled sections with clear topics and levels. That makes search and retrieval precise, so the assistant quotes the right part of a lesson instead of guessing.</p>
-<h2>Label what matters</h2>
-<p>Exercises are tagged by skill and difficulty, in both Arabic and English. Good labels let the platform recommend the next step for each learner and measure whether recommendations help.</p>
-<h2>Protect learners</h2>
-<p>Personal details are removed or pseudonymized before data is used for AI features, and access is limited by role. Learners' trust matters more than any single feature.</p>
-<h2>Check for fairness</h2>
-<p>I compare results across regions, languages, and levels to make sure the features work as well for every group, not just the largest one.</p>`,
-      ar: `<p>لا تكون ميزات الذكاء الاصطناعي أفضل من البيانات التي تتعلم منها وتبحث فيها. قبل أن يتمكن مساعد أتنيه من شرح الدروس أو اقتراح التمارين، احتاج المحتوى وبيانات المتعلمين إلى تجهيز حقيقي.</p>
-<h2>نظّف المحتوى وهيكله</h2>
-<p>قُسمت الدروس إلى أقسام صغيرة معنونة بمواضيع ومستويات واضحة. هذا يجعل البحث والاسترجاع دقيقين، فيقتبس المساعد الجزء الصحيح من الدرس بدلاً من التخمين.</p>
-<h2>وسّم ما يهم</h2>
-<p>توسم التمارين حسب المهارة ومستوى الصعوبة بالعربية والإنجليزية. التوسيم الجيد يتيح للمنصة اقتراح الخطوة التالية لكل متعلم وقياس ما إذا كانت الاقتراحات مفيدة.</p>
-<h2>احمِ المتعلمين</h2>
-<p>تُزال البيانات الشخصية أو تُخفى هويتها قبل استخدامها في ميزات الذكاء الاصطناعي، ويُقيَّد الوصول حسب الدور. ثقة المتعلمين أهم من أي ميزة.</p>
-<h2>تحقق من العدالة</h2>
-<p>أقارن النتائج بين المناطق واللغات والمستويات للتأكد من أن الميزات تعمل بالجودة نفسها لكل فئة، لا للفئة الأكبر فقط.</p>`,
-    },
-  },
-  {
-    slug: 'moving-into-data-engineering',
-    photo: '1531482615713-2afd69097998',
-    icon: 'bi-signpost-split', g1: '#111111', g2: '#71717a', mins: 4,
-    date: { en: 'May 2026', ar: 'مايو 2026' },
-    cat: { en: 'Career', ar: 'المسيرة المهنية' },
-    title: { en: 'What I learned moving into data engineering', ar: 'ما تعلمته في انتقالي إلى هندسة البيانات' },
-    excerpt: {
-      en: 'Lessons on tools, habits, and thinking in systems from my path into data work.',
-      ar: 'دروس عن الأدوات والعادات والتفكير المنظومي من رحلتي إلى عالم البيانات.',
-    },
-    body: {
-      en: `<p>Data engineering looks like a list of tools: SQL, Python, Airflow, dbt, cloud warehouses. The tools matter, but the habits behind them matter more. These are the lessons that changed how I work.</p>
-<h2>SQL is the foundation</h2>
-<p>Almost every problem eventually becomes a query. Getting comfortable with joins, window functions, and reading query plans paid off more than any new framework.</p>
-<h2>Think in systems</h2>
-<p>A pipeline is a chain of promises: this table will be fresh by 7 a.m., this column will never be empty. Writing those promises down, and testing them, is most of the job.</p>
-<h2>Talk to the people who use the data</h2>
-<p>The best pipeline is useless if it answers the wrong question. Short conversations with analysts and program teams saved me weeks of building the wrong thing.</p>
-<h2>Start small and ship</h2>
-<p>A simple pipeline that runs every day beats a perfect design that never ships. Improve it once real people depend on it.</p>`,
-      ar: `<p>تبدو هندسة البيانات كقائمة أدوات: SQL وPython وAirflow وdbt والمستودعات السحابية. الأدوات مهمة، لكن العادات خلفها أهم. هذه الدروس غيرت طريقة عملي.</p>
-<h2>SQL هي الأساس</h2>
-<p>تتحول كل مشكلة تقريباً في النهاية إلى استعلام. إتقان الربط ودوال النوافذ وقراءة خطط التنفيذ أفادني أكثر من أي إطار عمل جديد.</p>
-<h2>فكّر بالمنظومة</h2>
-<p>خط البيانات سلسلة من الوعود: سيكون هذا الجدول محدثاً بحلول السابعة صباحاً، ولن يكون هذا العمود فارغاً أبداً. كتابة هذه الوعود واختبارها هي معظم العمل.</p>
-<h2>تحدث مع من يستخدمون البيانات</h2>
-<p>أفضل خط بيانات لا قيمة له إذا أجاب عن السؤال الخطأ. محادثات قصيرة مع المحللين وفرق البرامج وفرت عليّ أسابيع من بناء الشيء الخطأ.</p>
-<h2>ابدأ صغيراً وأطلق</h2>
-<p>خط بيانات بسيط يعمل كل يوم أفضل من تصميم مثالي لا يُطلق أبداً. حسّنه عندما يعتمد عليه أشخاص حقيقيون.</p>`,
-    },
-  },
 ];
 
-/** How many articles the home page shows before "Show more". */
+/** How many articles the home page shows before "Show more" (desktop, then phones). */
 export const VISIBLE_ARTICLES = 3;
+export const VISIBLE_ARTICLES_MOBILE = 2;
 
 export const findArticle = slug => ARTICLES.find(a => a.slug === slug);
 

@@ -14,6 +14,8 @@
 .prose p { margin-bottom: 1.4rem; }
 .prose h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -.03em; margin: 2.6rem 0 .9rem; color: var(--ink); }
 .prose strong { color: var(--ink); }
+.prose ol, .prose ul { padding-inline-start: 1.4rem; margin-bottom: 1.4rem; }
+.prose li { font-size: inherit; margin-bottom: .6rem; }
 .prose > p:first-child::first-letter { float: inline-start; font-size: 3.4em; line-height: .9; font-weight: 800; margin-inline-end: .1em; margin-top: .08em; }
 [dir="rtl"] .prose > p:first-child::first-letter { float: none; font-size: inherit; font-weight: inherit; margin: 0; }
 .article-more-sec { border-top: 1px solid var(--line); }

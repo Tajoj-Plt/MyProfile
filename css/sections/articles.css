@@ -11,6 +11,11 @@
 .article-row:hover::before { opacity: 1; }
 .article-row.is-extra { display: none; }
 .article-list.show-all .article-row.is-extra { display: grid; }
+/* Phones show fewer articles until "Show more" */
+@media (max-width: 767.98px) {
+  .article-row.is-extra-sm { display: none; }
+  .article-list.show-all .article-row.is-extra-sm { display: grid; }
+}
 .article-thumb {
   width: 96px; height: 96px; border-radius: 20px; display: grid; place-items: center; overflow: hidden; position: relative;
   background: linear-gradient(135deg, var(--g1), var(--g2)); color: #fff; font-size: 2rem;

@@ -18,7 +18,7 @@
       try { store = window.localStorage; } catch (e) {}
       var get = function (k) { try { return store && store.getItem(k); } catch (e) { return null; } };
       var lang = new URLSearchParams(location.search).get('lang') || get('lang') || 'en';
-      var theme = get('theme') === 'dark' ? 'dark' : 'light';
+      var theme = 'light'; // dark mode toggle is hidden for now
       d.lang = lang === 'ar' ? 'ar' : 'en';
       d.dir = lang === 'ar' ? 'rtl' : 'ltr';
       d.setAttribute('data-theme', theme);
@@ -70,13 +70,14 @@
         <a class="nav-link-x active" href="#hero">Home</a>
         <a class="nav-link-x" href="#services">What I Do</a>
         <a class="nav-link-x" href="#journey">Journey</a>
+        <a class="nav-link-x" href="#certificates">Certificates</a>
         <a class="nav-link-x" href="#work">Work</a>
         <a class="nav-link-x" href="#articles">Articles</a>
         <a class="nav-link-x" href="#contact">Contact</a>
       </nav>
 
       <div class="tw-flex tw-items-center tw-gap-3">
-        <button class="icon-btn theme-toggle d-none d-lg-grid" type="button" aria-label="Toggle dark mode">
+        <button class="icon-btn theme-toggle d-none" type="button" aria-label="Toggle dark mode">
           <i class="bi bi-moon-stars"></i>
         </button>
         <div class="dropdown d-none d-lg-block">
@@ -106,11 +107,12 @@
       <a class="mobile-link" href="#hero" data-menu-link>Home <span>01</span></a>
       <a class="mobile-link" href="#services" data-menu-link>What I Do <span>02</span></a>
       <a class="mobile-link" href="#journey" data-menu-link>Journey <span>03</span></a>
-      <a class="mobile-link" href="#work" data-menu-link>Work <span>04</span></a>
-      <a class="mobile-link" href="#articles" data-menu-link>Articles <span>05</span></a>
-      <a class="mobile-link" href="#contact" data-menu-link>Contact <span>06</span></a>
+      <a class="mobile-link" href="#certificates" data-menu-link>Certificates <span>04</span></a>
+      <a class="mobile-link" href="#work" data-menu-link>Work <span>05</span></a>
+      <a class="mobile-link" href="#articles" data-menu-link>Articles <span>06</span></a>
+      <a class="mobile-link" href="#contact" data-menu-link>Contact <span>07</span></a>
       <div class="menu-settings tw-mt-auto">
-        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode">
+        <button class="icon-btn theme-toggle d-none" type="button" aria-label="Toggle dark mode">
           <i class="bi bi-moon-stars"></i>
         </button>
         <button class="icon-btn" type="button" data-lang-switch aria-label="Switch language">
@@ -237,7 +239,7 @@
             <div class="xp-role">Programming Language Assistant Teacher</div>
             <div class="xp-date">2019 – 2020</div>
           </div>
-          <div class="xp-row reveal">
+          <div class="xp-row reveal xp-extra-sm">
             <div><h4>CompuLearn</h4><small>United Arab Emirates</small></div>
             <div class="xp-role">Mobile Apps Developer</div>
             <div class="xp-date">2021 – 2022</div>
@@ -308,7 +310,10 @@
               <span class="tag">React Native</span><span class="tag">TypeScript</span><span class="tag">RAG</span>
               <span class="tag">RTL</span><span class="tag">Clean Architecture</span>
             </div>
-            <a href="work.html" class="btn-ink btn-lg-x tw-mt-8 reveal" style="--d:.3s">View more projects <i class="bi bi-arrow-up-right"></i></a>
+            <div class="tw-flex tw-flex-wrap tw-gap-3 tw-mt-8 reveal" style="--d:.3s">
+              <a href="atnii.html" class="btn-ink btn-lg-x">Read more about Atnii <i class="bi bi-arrow-up-right"></i></a>
+              <a href="work.html" class="btn-ghost-x btn-lg-x">View more projects <i class="bi bi-arrow-up-right"></i></a>
+            </div>
           </div>
 
           <div class="col-lg-6 work-media">

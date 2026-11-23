@@ -10,6 +10,7 @@ export const AR_HTML = {
   workTitle: 'أتنيه — مجتمع<br>معرفي عن السودان',
   contactTitle: 'لديك مشروع<br>في ذهنك؟',
   articlesTitle: 'ملاحظات من البناء<br>بالبيانات.',
+  workListTitle: 'مشاريع خططتُ لها<br>وبنيتها',
   workPageTitle: 'فكرة واحدة، بُنيت<br>كمنظومة متكاملة',
   p1Title: 'أتنيه<br>المجتمع', p2Title: 'اسأل عن<br>السودان',
   p3Title: 'أتنيه<br>المكتبة', p4Title: 'أتنيه<br>منصة البيانات',
@@ -17,7 +18,7 @@ export const AR_HTML = {
 };
 export const AR = {
   'Available for work': 'متاح للعمل',
-  'Home': 'الرئيسية', 'Articles': 'المقالات', 'Work': 'الأعمال', 'What I Do': 'ما أقدمه', 'Journey': 'المسيرة', 'Contact': 'تواصل',
+  'Home': 'الرئيسية', 'Articles': 'المقالات', 'Work': 'الأعمال', 'What I Do': 'ما أقدمه', 'Journey': 'المسيرة', 'Certificates': 'الشهادات', 'Read more about Atnii': 'اقرأ المزيد عن أتنيه', 'Contact': 'تواصل',
   "Let's Talk": 'لنتحدث', "Let's collaborate": 'لنتعاون', 'Menu': 'القائمة',
   'I design and build reliable data platforms — pipelines, warehouses, dashboards, and AI-ready data — that turn messy information into clear decisions, from field surveys to production apps.': 'أصمم وأبني منصات بيانات موثوقة — خطوط بيانات ومستودعات ولوحات معلومات وبيانات جاهزة للذكاء الاصطناعي — تحوّل المعلومات المبعثرة إلى قرارات واضحة، من المسوحات الميدانية إلى التطبيقات الإنتاجية.',
   'CAPABILITIES': 'الخدمات', 'STACK': 'التقنيات', 'JOURNEY': 'المسيرة', 'WORK': 'الأعمال', 'CONTACT': 'تواصل', '/JOURNEY': '/المسيرة',
@@ -95,7 +96,8 @@ export const AR = {
   'Lessons on tools, habits, and thinking in systems from my path into data work.': 'دروس عن الأدوات والعادات والتفكير المنظومي من رحلتي إلى عالم البيانات.',
   // Project page (work.html)
   'Back to articles': 'العودة للمقالات', 'More articles': 'مقالات أخرى', 'All articles': 'كل المقالات',
-  'Back home': 'العودة للرئيسية', 'The Atnii Square project': 'مشروع أتنيه', 'ATNII SQUARE': 'أتنيه',
+  'Back home': 'العودة للرئيسية', 'All projects': 'كل المشاريع',
+  'Apps, data platforms, and AI products, each taken from the first idea to a working product.': 'تطبيقات ومنصات بيانات ومنتجات ذكاء اصطناعي، أخذت كلاً منها من الفكرة الأولى إلى منتج يعمل.', 'The Atnii Square project': 'مشروع أتنيه', 'ATNII SQUARE': 'أتنيه',
   'Atnii Square brings learners, mentors, and data together. Here is how each part was planned, designed, and built, from the mobile apps people use every day to the data platform that powers them.':
     'تجمع أتنيه بين المتعلمين والمرشدين والبيانات. إليك كيف خُطط لكل جزء وصُمم وبُني، من تطبيقات الجوال التي يستخدمها الناس يومياً إلى منصة البيانات التي تشغّلها.',
   'In progress': 'قيد التطوير', 'Website & dashboard': 'الموقع ولوحة التحكم', 'Data & AI platform': 'منصة البيانات والذكاء الاصطناعي',

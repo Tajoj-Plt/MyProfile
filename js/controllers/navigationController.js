@@ -13,11 +13,13 @@ function initHeaderShadow() {
 /** Highlight the nav link of the section in the middle of the screen (same-page links only). */
 function initActiveLink() {
   const links = $$('#mainNav .nav-link-x');
+  // Certificates sits inside Journey, so several targets can be in view at once:
+  // highlight the last one in page order (the innermost).
+  const inView = new Set();
   const spy = new IntersectionObserver(entries => {
-    entries.forEach(en => {
-      if (!en.isIntersecting) return;
-      links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + en.target.id));
-    });
+    entries.forEach(en => (en.isIntersecting ? inView.add(en.target) : inView.delete(en.target)));
+    const current = [...inView].sort((a, b) => (a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1)).pop();
+    if (current) links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current.id));
   }, { rootMargin: '-45% 0px -50% 0px' });
   links.forEach(l => {
     const href = l.getAttribute('href');
