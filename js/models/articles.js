@@ -5,7 +5,7 @@
 export const ARTICLES = [
   {
     slug: 'story-behind-atnii-square',
-    photo: '1481627834876-b7833e8f5570',
+    image: { thumb: 'assets/article-atnii-thumb.png', cover: 'assets/article-atnii-cover.png' },
     icon: 'bi-book', g1: '#b45309', g2: '#f59e0b', mins: 4,
     date: { en: 'Nov 2026', ar: 'نوفمبر 2026' },
     cat: { en: 'Atnii Square', ar: 'أتنيه' },
@@ -125,7 +125,12 @@ export const findArticle = slug => ARTICLES.find(a => a.slug === slug);
 
 export const otherArticles = (slug, count = 3) => ARTICLES.filter(a => a.slug !== slug).slice(0, count);
 
-/** Unsplash photo URL for an article (free to use under the Unsplash License). */
-export const articlePhoto = (a, w, h) => `https://images.unsplash.com/photo-${a.photo}?w=${w}&h=${h}&fit=crop&q=70&auto=format`;
+/**
+ * Image URL for an article: its own files in assets/ (`image.thumb` for the square list
+ * thumbnail, `image.cover` for the wide cover), or an Unsplash photo (`photo`, free to use
+ * under the Unsplash License) cropped to the size asked for.
+ */
+export const articlePhoto = (a, w, h) =>
+  a.image ? (w > h ? a.image.cover : a.image.thumb) : `https://images.unsplash.com/photo-${a.photo}?w=${w}&h=${h}&fit=crop&q=70&auto=format`;
 
 export const articleUrl = a => `article.html?a=${encodeURIComponent(a.slug)}`;

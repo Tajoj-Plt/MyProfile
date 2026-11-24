@@ -24,4 +24,31 @@ export const PROJECTS = [
       { src: 'assets/app-join.jpg', alt: 'Atnii Square app: join the community' },
     ],
   },
+  {
+    slug: 'fawtrasmart',
+    page: 'fawtrasmart.html',
+    site: { href: 'https://fawtrasmart.com', label: 'fawtrasmart.com' },
+    name: { en: 'FawtraSmart', ar: 'FawtraSmart' },
+    kind: { en: 'ERP system · Web & mobile', ar: 'نظام ERP · ويب وجوال' },
+    title: { en: 'FawtraSmart — an ERP suite<br>for growing businesses', ar: 'FawtraSmart — نظام ERP<br>للشركات النامية' },
+    lead: {
+      en: 'An integrated resource management system with a web dashboard and a mobile app. Teams manage sales and invoices, customers and loyalty, inventory and stock movements, finance and accounts, and HR and payroll, with real-time analytics, multi-user access, and enterprise-grade security. It works in Arabic, English, Urdu, Hindi, and Bengali.',
+      ar: 'نظام متكامل لإدارة الموارد يضم لوحة تحكم على الويب وتطبيقاً للجوال. تدير الفرق من خلاله المبيعات والفواتير، والعملاء والولاء، والمخزون وحركته، والمالية والحسابات، والموارد البشرية والرواتب، مع تحليلات لحظية وتعدد المستخدمين وأمان بمستوى المؤسسات. ويعمل بالعربية والإنجليزية والأردية والهندية والبنغالية.',
+    },
+    features: {
+      en: ['Sales & invoicing', 'Inventory & finance', 'HR & payroll'],
+      ar: ['المبيعات والفواتير', 'المخزون والمالية', 'الموارد البشرية والرواتب'],
+    },
+    tagsLabel: { en: 'Highlights', ar: 'أبرز المزايا' },
+    tags: {
+      en: ['ERP', 'Web dashboard', 'Mobile app', 'Real-time analytics', 'Five languages', 'RTL', 'Dark mode'],
+      ar: ['ERP', 'لوحة تحكم ويب', 'تطبيق جوال', 'تحليلات لحظية', 'خمس لغات', 'دعم RTL', 'الوضع الداكن'],
+    },
+    web: { src: 'assets/fawtra-web-login.webp', alt: 'FawtraSmart web dashboard: sign-in page' },
+    screens: [
+      { src: 'assets/fawtra-splash.jpg', alt: 'FawtraSmart app: splash screen' },
+      { src: 'assets/fawtra-login.jpg', alt: 'FawtraSmart app: sign-in screen' },
+      { src: 'assets/fawtra-home.jpg', alt: 'FawtraSmart app: home screen with the system modules' },
+    ],
+  },
 ];

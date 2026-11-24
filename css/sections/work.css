@@ -74,3 +74,20 @@
   .phones { height: 470px; }
   .phone { width: 205px; height: 428px; }
 }
+
+/* Work page: web and mobile versions shown separately (e.g. FawtraSmart) */
+.project-gallery { display: grid; gap: 2.2rem; max-width: 540px; margin-inline: auto; }
+.gallery-label { display: inline-flex; align-items: center; gap: .45rem; margin-bottom: .9rem; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #8a8a8a; }
+.gallery-label .bi { font-size: 1rem; color: var(--ink); }
+.project-gallery .gallery-browser { position: relative; width: 100%; transform: none; }
+.gallery-phones { display: flex; justify-content: space-between; gap: 4%; }
+.gallery-phones .phone.phone-sm { position: relative; inset: auto; transform: none; width: 30.6%; height: auto; aspect-ratio: 165 / 342; border-radius: 20px; }
+.phone.phone-sm::before { top: 6px; width: 30%; height: 12px; }
+.phone-sm .phone-screen { border-radius: 18px; }
+.phone-sm .phone-screen.shot { padding-top: 16px; }
+@media (max-width: 575px) {
+  .gallery-phones .phone.phone-sm { border-radius: 14px; }
+  .phone.phone-sm::before { top: 4px; height: 9px; }
+  .phone-sm .phone-screen { border-radius: 12px; }
+  .phone-sm .phone-screen.shot { padding-top: 12px; }
+}

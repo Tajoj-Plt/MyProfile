@@ -143,3 +143,7 @@
 .browser-back { top: 9%; inset-inline-start: 5%; transform: rotate(-3deg); opacity: .9; }
 .browser-front { bottom: 9%; inset-inline-end: 5%; transform: rotate(2deg); z-index: 1; }
 @media (max-width: 575px) { .media-card.media-browsers { min-height: 300px; } }
+
+/* One web screenshot in a media card (FawtraSmart web dashboard) */
+.media-card.media-web { max-width: 560px; min-height: 380px; padding: 1.8rem; }
+.media-web .browser { position: relative; width: 100%; transform: rotate(-1.5deg); }

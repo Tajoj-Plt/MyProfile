@@ -15,8 +15,8 @@ Then open http://localhost:5173.
 ## Structure (MVC)
 
 ```
-index.html, work.html, atnii.html, article.html   page markup (English source text)
-                      work.html lists projects; atnii.html is the Atnii Square case study
+index.html, work.html, atnii.html, fawtrasmart.html, article.html   page markup
+                      work.html lists projects; atnii.html and fawtrasmart.html are case studies
 css/
   main.css            imports the partials below, in order
   base/ layout/ components/ sections/ pages/ motion/ themes/

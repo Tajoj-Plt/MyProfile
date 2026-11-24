@@ -10,6 +10,8 @@ export const AR_HTML = {
   workTitle: 'أتنيه — مجتمع<br>معرفي عن السودان',
   contactTitle: 'لديك مشروع<br>في ذهنك؟',
   articlesTitle: 'ملاحظات من البناء<br>بالبيانات.',
+  fawtraPageTitle: 'نظام واحد<br>لكل أعمال الشركة', f1Title: 'FawtraSmart<br>لوحة التحكم على الويب',
+  f2Title: 'FawtraSmart<br>تطبيق الجوال', f3Title: 'خمس وحدات،<br>نظام واحد',
   workListTitle: 'مشاريع خططتُ لها<br>وبنيتها',
   workPageTitle: 'فكرة واحدة، بُنيت<br>كمنظومة متكاملة',
   p1Title: 'أتنيه<br>المجتمع', p2Title: 'اسأل عن<br>السودان',
@@ -104,6 +106,30 @@ export const AR = {
   'My role': 'دوري', 'Product planning': 'تخطيط المنتج', 'Data & AI': 'البيانات والذكاء الاصطناعي', 'UX/UI design': 'تصميم التجربة والواجهة',
   'Implementation': 'التنفيذ', 'Delivery': 'التسليم', 'Coming soon': 'قريباً',
   'Web dashboard': 'لوحة تحكم ويب',
+  // FawtraSmart page
+  'The FawtraSmart project': 'مشروع FawtraSmart',
+  'FawtraSmart is an ERP system that brings a company’s daily operations into one place, with a web dashboard for the office and a mobile app for teams in the field. Here is how each part works.': 'FawtraSmart نظام ERP يجمع العمليات اليومية للشركة في مكان واحد، مع لوحة تحكم على الويب للمكتب وتطبيق جوال للفرق الميدانية. وهذه طريقة عمل كل جزء منه.',
+  'Visit fawtrasmart.com': 'زيارة fawtrasmart.com',
+  'The full system in the browser, for managers and office teams': 'النظام كاملاً في المتصفح، للمديرين وفرق المكتب',
+  'Teams sign in with their company email to reach their dashboard. It brings together real-time business analytics, integrated inventory management, advanced financial reporting, multi-user collaboration, and enterprise-grade security, and it works in Arabic, English, Urdu, Hindi, and Bengali.': 'تسجّل الفرق الدخول ببريد الشركة للوصول إلى لوحة التحكم. وتجمع اللوحة تحليلات لحظية للأعمال، وإدارة متكاملة للمخزون، وتقارير مالية متقدمة، وتعاوناً بين عدة مستخدمين، وأماناً بمستوى المؤسسات، وتعمل بالعربية والإنجليزية والأردية والهندية والبنغالية.',
+  'Real-time analytics': 'تحليلات لحظية',
+  'Inventory': 'المخزون',
+  'Financial reports': 'التقارير المالية',
+  'Multi-user': 'تعدد المستخدمين',
+  'Secure sign-in': 'دخول آمن',
+  'Five languages': 'خمس لغات',
+  'The system in your pocket, for sales reps and teams on the move': 'النظام في جيبك، لمندوبي المبيعات والفرق المتنقلة',
+  'The app opens with a branded splash screen and a simple sign-in. Users can switch between Arabic and English and between light and dark themes, and each person sees the modules their role gives them access to, with notifications for what needs their attention.': 'يفتح التطبيق بشاشة ترحيب تحمل هويته وتسجيل دخول بسيط. ويمكن للمستخدم التبديل بين العربية والإنجليزية وبين الوضعين الفاتح والداكن، ويرى كل شخص الوحدات التي تتيحها له صلاحياته، مع إشعارات بما يحتاج إلى متابعته.',
+  'Dark mode': 'الوضع الداكن',
+  'Right-to-left': 'من اليمين لليسار',
+  'System modules': 'وحدات النظام',
+  'Everything a growing business runs on, in one place': 'كل ما تحتاجه الشركة النامية في مكان واحد',
+  'The home screen greets each user and lists the modules available to them today: sales management for sales and invoices, customer management for customers and loyalty, inventory management for stock and its movements, finance and accounts for journal entries and accounts, and HR management for employees and payroll. The modules are part of one integrated system, so every team works from the same data.': 'ترحّب الشاشة الرئيسية بكل مستخدم وتعرض الوحدات المتاحة له اليوم: إدارة المبيعات للمبيعات والفواتير، وإدارة العملاء للعملاء والولاء، وإدارة المخزون للمخزون وحركته، والمالية والحسابات للقيود والحسابات، وإدارة الموارد البشرية للموظفين والرواتب. والوحدات جزء من نظام واحد متكامل، فتعمل كل الفرق على البيانات نفسها.',
+  'Sales & invoices': 'المبيعات والفواتير',
+  'Customers & loyalty': 'العملاء والولاء',
+  'Inventory & stock': 'المخزون وحركته',
+  'Finance & accounts': 'المالية والحسابات',
+  'HR & payroll': 'الموارد البشرية والرواتب',
   'One place for the team to run the platform and see what is happening': 'مكان واحد يدير منه الفريق المنصة ويتابع ما يجري فيها',
   'A web dashboard where staff sign in to manage the whole platform: the library (books, articles, research, papers, translations, videos, and audio), the media library, and community posts, clips, and comments. The overview shows users, content waiting for review, open reports, live activity, 30-day growth, storage use, and the health of the database, cache, and file storage. It works in Arabic and English, with light and dark themes.':
     'لوحة تحكم ويب يسجّل فيها الموظفون الدخول لإدارة المنصة كاملة: المكتبة (الكتب والمقالات والبحوث والأوراق العلمية والمترجمة والفيديو والصوتيات)، ومكتبة الوسائط، ومنشورات المجتمع ومقاطعه وتعليقاته. وتعرض النظرة العامة المستخدمين والمحتوى بانتظار المراجعة والبلاغات المفتوحة والنشاط المباشر والنمو خلال 30 يوماً والمساحة المستخدمة وحالة قاعدة البيانات والذاكرة المؤقتة وتخزين الملفات. وتعمل بالعربية والإنجليزية، مع وضعين فاتح وداكن.',
@@ -162,8 +188,8 @@ export const AR = {
     'أتنيه تطبيق مجتمعي للمعرفة عن السودان: يشارك الناس ويتناقشون في المنشورات والمجموعات، ويقرؤون في مكتبة مشتركة، ويسألون مساعداً ذكياً يعتمد على مصادر موثوقة. إليك كيف خُطط لكل جزء وصُمم وبُني.',
   'AI assistant': 'مساعد ذكي', 'In-app library': 'مكتبة داخل التطبيق',
   'A social space to share, discuss, and learn about Sudan together': 'مساحة اجتماعية للمشاركة والنقاش والتعلم عن السودان معاً',
-  'The heart of the app: a community feed for posts and book recommendations, groups such as “Readings in Sudan’s history”, live discussions, and a personal profile with followers, posts, and activity. Built right-to-left first, with a calm dark interface.':
-    'قلب التطبيق: صفحة منشورات للمجتمع وترشيحات الكتب، ومجموعات مثل «قراءات في تاريخ السودان»، ونقاشات حية، وملف شخصي بالمتابعين والمشاركات والنشاط. مصمم بالعربية أولاً بواجهة داكنة هادئة.',
+  'The heart of the app: a community feed for posts and book recommendations, groups such as “Readings in Sudan’s history”, live discussions, and a personal profile with followers, posts, and activity. Built right-to-left first, with a clean, light interface.':
+    'قلب التطبيق: صفحة منشورات للمجتمع وترشيحات الكتب، ومجموعات مثل «قراءات في تاريخ السودان»، ونقاشات حية، وملف شخصي بالمتابعين والمشاركات والنشاط. مصمم بالعربية أولاً بواجهة فاتحة وواضحة.',
   'I shaped the community experience from the feed to groups and profiles, designed the core flows, and built the app with the data model and activity tracking behind it.':
     'صممت تجربة المجتمع من صفحة المنشورات إلى المجموعات والملفات الشخصية، ورسمت التدفقات الأساسية، وبنيت التطبيق مع نموذج البيانات وتتبع النشاط خلفه.',
   'Community feed': 'صفحة المجتمع', 'Groups': 'المجموعات', 'Discussions': 'النقاشات', 'Profiles': 'الملفات الشخصية', 'Arabic first': 'العربية أولاً',
@@ -174,8 +200,8 @@ export const AR = {
     'صممت خط الاسترجاع خلف المساعد: تجهيز محتوى أتنيه وفهرسته، وبناء كل إجابة على مصادر، وربط النتائج بالتطبيق.',
   'Source-grounded answers': 'إجابات مبنية على المصادر', 'Citations': 'إحالات', 'Linked content': 'محتوى مرتبط', 'Honest when unsure': 'صريح عند عدم التأكد',
   'Books, articles, and videos about Sudan in one shared library': 'كتب ومقالات وفيديوهات عن السودان في مكتبة مشتركة واحدة',
-  'A library of books, articles, and videos that the community reads together. Items connect to reading groups and discussions, and the AI assistant uses the same library as its trusted sources.':
-    'مكتبة من الكتب والمقالات والفيديوهات يقرؤها المجتمع معاً. ترتبط عناصرها بمجموعات القراءة والنقاشات، ويستخدم المساعد الذكي المكتبة نفسها كمصادره الموثوقة.',
+  'A library of books, articles, research, scientific papers, videos, and audio that the community reads together. Readers filter by topic, such as history, environment, economy, and literature, and see picks chosen for them and the most-read titles. Items connect to reading groups and discussions, and the AI assistant uses the same library as its trusted sources.':
+    'مكتبة من الكتب والمقالات والأبحاث والأوراق العلمية والفيديوهات والصوتيات يقرؤها المجتمع معاً. يصفّي القرّاء حسب الموضوع، مثل التاريخ والبيئة والاقتصاد والأدب، ويرون ما اختير لهم والعناوين الأكثر قراءة. ترتبط عناصرها بمجموعات القراءة والنقاشات، ويستخدم المساعد الذكي المكتبة نفسها كمصادره الموثوقة.',
   'I structured the library content and metadata, built the search and categories, and made it the shared source for both reading groups and the AI assistant.':
     'نظمت محتوى المكتبة وبياناتها الوصفية، وبنيت البحث والتصنيفات، وجعلتها المصدر المشترك لمجموعات القراءة والمساعد الذكي.',
   'Books': 'كتب', 'Articles': 'المقالات', 'Videos': 'فيديوهات', 'Search': 'البحث', 'Reading groups': 'مجموعات القراءة', 'Read my articles': 'اقرأ مقالاتي',
