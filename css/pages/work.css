@@ -132,3 +132,14 @@
 [data-theme="dark"] .chip-green, [data-theme="dark"] .status { color: #4ade80; }
 [data-theme="dark"] .pipe-node:not(.core) { background: #1c1c21; border-color: #2e2e34; color: var(--ink); }
 [data-theme="dark"] .pipe-node.core { background: var(--ink); color: var(--bg); }
+
+/* Desktop screenshots in browser windows (admin dashboard) */
+.media-card.media-browsers { max-width: 560px; min-height: 420px; display: block; padding: 0; }
+.browser { position: absolute; width: 82%; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--line); box-shadow: 0 30px 60px -28px rgba(0, 0, 0, .45); }
+.browser img { display: block; width: 100%; height: auto; }
+.browser-bar { display: flex; gap: 5px; padding: 8px 10px; background: #f1f1f3; border-bottom: 1px solid var(--line); }
+.browser-bar i { width: 8px; height: 8px; border-radius: 50%; background: #d4d4d8; }
+.browser-bar i:first-child { background: #ff5f57; } .browser-bar i:nth-child(2) { background: #febc2e; } .browser-bar i:nth-child(3) { background: #28c840; }
+.browser-back { top: 9%; inset-inline-start: 5%; transform: rotate(-3deg); opacity: .9; }
+.browser-front { bottom: 9%; inset-inline-end: 5%; transform: rotate(2deg); z-index: 1; }
+@media (max-width: 575px) { .media-card.media-browsers { min-height: 300px; } }

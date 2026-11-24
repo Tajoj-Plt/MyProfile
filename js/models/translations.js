@@ -13,7 +13,7 @@ export const AR_HTML = {
   workListTitle: 'مشاريع خططتُ لها<br>وبنيتها',
   workPageTitle: 'فكرة واحدة، بُنيت<br>كمنظومة متكاملة',
   p1Title: 'أتنيه<br>المجتمع', p2Title: 'اسأل عن<br>السودان',
-  p3Title: 'أتنيه<br>المكتبة', p4Title: 'أتنيه<br>منصة البيانات',
+  p3Title: 'أتنيه<br>المكتبة', p4Title: 'أتنيه<br>منصة البيانات', p5Title: 'أتنيه<br>لوحة التحكم',
   roleTitle: 'دوري يتجاوز<br>مجرد التنفيذ', ctaTitle: 'لديك فكرة تستحق<br>أن تُبنى بإتقان؟',
 };
 export const AR = {
@@ -103,6 +103,14 @@ export const AR = {
   'In progress': 'قيد التطوير', 'Website & dashboard': 'الموقع ولوحة التحكم', 'Data & AI platform': 'منصة البيانات والذكاء الاصطناعي',
   'My role': 'دوري', 'Product planning': 'تخطيط المنتج', 'Data & AI': 'البيانات والذكاء الاصطناعي', 'UX/UI design': 'تصميم التجربة والواجهة',
   'Implementation': 'التنفيذ', 'Delivery': 'التسليم', 'Coming soon': 'قريباً',
+  'Web dashboard': 'لوحة تحكم ويب',
+  'One place for the team to run the platform and see what is happening': 'مكان واحد يدير منه الفريق المنصة ويتابع ما يجري فيها',
+  'A web dashboard where staff sign in to manage the whole platform: the library (books, articles, research, papers, translations, videos, and audio), the media library, and community posts, clips, and comments. The overview shows users, content waiting for review, open reports, live activity, 30-day growth, storage use, and the health of the database, cache, and file storage. It works in Arabic and English, with light and dark themes.':
+    'لوحة تحكم ويب يسجّل فيها الموظفون الدخول لإدارة المنصة كاملة: المكتبة (الكتب والمقالات والبحوث والأوراق العلمية والمترجمة والفيديو والصوتيات)، ومكتبة الوسائط، ومنشورات المجتمع ومقاطعه وتعليقاته. وتعرض النظرة العامة المستخدمين والمحتوى بانتظار المراجعة والبلاغات المفتوحة والنشاط المباشر والنمو خلال 30 يوماً والمساحة المستخدمة وحالة قاعدة البيانات والذاكرة المؤقتة وتخزين الملفات. وتعمل بالعربية والإنجليزية، مع وضعين فاتح وداكن.',
+  'I designed the dashboard around the questions the team asks every day, built the content management screens, and connected the overview to the platform data so the numbers are always current.':
+    'صممت اللوحة حول الأسئلة التي يطرحها الفريق يومياً، وبنيت شاشات إدارة المحتوى، وربطت النظرة العامة ببيانات المنصة لتبقى الأرقام محدّثة دائماً.',
+  'Staff sign-in': 'دخول الموظفين', 'Content management': 'إدارة المحتوى', 'Review & reports': 'المراجعة والبلاغات',
+  'Live metrics': 'مؤشرات مباشرة', 'System health': 'حالة النظام',
   'An AI study companion that makes learning clear, guided, and personal': 'رفيق دراسي بالذكاء الاصطناعي يجعل التعلم واضحاً وموجهاً وشخصياً',
   'A mobile app for learners with daily lessons, guided practice, progress tracking, and an AI assistant that answers questions in Arabic and English. Built for real connectivity conditions, with offline-friendly content and a calm, focused interface.':
     'تطبيق جوال للمتعلمين يضم دروساً يومية وتدريباً موجهاً وتتبعاً للتقدم ومساعداً ذكياً يجيب عن الأسئلة بالعربية والإنجليزية. مصمم لظروف الاتصال الحقيقية، بمحتوى يعمل دون إنترنت وواجهة هادئة ومركزة.',
